@@ -1,0 +1,57 @@
+<nav>
+  <ul>
+    <li>
+      {%if page.fileSlug != 'svelte-poc' %}
+        {% if locale == 'de' %}
+          <a href="/" {% if page.fileSlug == 'home' %} data-current="current item"{% endif %}>Home: {{locale}}</a>
+          <a href="/report/" {% if page.fileslug == 'report' %} data-current="current item"{% endif %}>Report: {{locale}}</a>
+        {% else %}
+          <a href="/{{locale}}/" {% if page.fileSlug == 'home' %} data-current="current item"{% endif %}>Home: {{locale}}</a>
+          <a href="/report/{{locale}}/" {% if page.fileslug == 'report' %} data-current="current item"{% endif %}>Report: {{locale}}</a>
+        {% endif %}
+      {% else %}
+        <a href="/">Home</a>
+        <a href="/report/">Report</a>
+      {% endif %}
+    </li>
+    <li>
+      <a href="/svelte-poc/">🔥Svelte</a>
+    </li>
+  </ul>
+
+  {# render the lang switch links #}
+  {# also see _data/site.js {{ site.languages }} #}
+  {%if page.fileSlug != 'svelte-poc' %}
+
+    <div id="lang-dropdown-container">
+      <details>
+        <summary>
+          <li class="lang-active">{{locale}}</li>
+        </summary>
+        <ul id="lang-dropdown">
+          {# extract path fragment; deal with /home #}
+          {% if page.fileSlug == 'home'%}
+            {% set fileSlug = "" | url %}
+          {% else %}
+            {% set fileSlug = page.fileSlug %}
+          {% endif %}
+          {% if locale != 'de' %}
+            <li>
+              <a href="{{ ['/', fileslug, '/'] | join | url }}">DE</a>
+            </li>
+          {% endif %}
+          {% if locale != 'en' %}
+            <li>
+              <a href="{{ ['/', fileslug, '/en/'] | join | url }}">EN</a>
+            </li>
+          {% endif %}
+          {% if locale != 'fr' %}
+            <li>
+              <a href="{{ ['/', fileslug, '/fr/'] | join | url }}">FR</a>
+            </li>
+          {% endif %}
+        </ul>
+      </details>
+    </div>
+  {% endif %}
+</nav>
