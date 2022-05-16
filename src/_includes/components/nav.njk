@@ -4,10 +4,10 @@
       {%if page.fileSlug != 'svelte-poc' %}
         {% if locale == 'de' %}
           <a href="/" {% if page.fileSlug == 'home' %} data-current="current item"{% endif %}>Home: {{locale}}</a>
-          <a href="/report/" {% if page.fileslug == 'report' %} data-current="current item"{% endif %}>Report: {{locale}}</a>
+          <a href="/report/" {% if page.fileSlug == 'report' %} data-current="current item"{% endif %}>Report: {{locale}}</a>
         {% else %}
           <a href="/{{locale}}/" {% if page.fileSlug == 'home' %} data-current="current item"{% endif %}>Home: {{locale}}</a>
-          <a href="/report/{{locale}}/" {% if page.fileslug == 'report' %} data-current="current item"{% endif %}>Report: {{locale}}</a>
+          <a href="/report/{{locale}}/" {% if page.fileSlug == 'report' %} data-current="current item"{% endif %}>Report: {{locale}}</a>
         {% endif %}
       {% else %}
         <a href="/">Home</a>

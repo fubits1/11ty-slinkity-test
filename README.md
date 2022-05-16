@@ -1,6 +1,6 @@
 Original: [![Netlify Status](https://api.netlify.com/api/v1/badges/bbf28a84-4bdb-407b-a2fa-32628d27fa3d/deploy-status)](https://app.netlify.com/sites/eleventy-netlify-boilerplate/deploys) | i18n: [![Netlify Status](https://api.netlify.com/api/v1/badges/63dffdc1-337d-43ca-8be9-7963adf10a26/deploy-status)](https://app.netlify.com/sites/11ty-multilang-i18n/deploys)
 
-# Eleventy Netlify Boilerplate (i18n Mod.)
+# Eleventy Netlify Boilerplate (Slinkity Mod.)
 
 ## [Original Demo Site](https://eleventy-netlify-boilerplate.netlify.app/) | [i18n Demo Site](https://11ty-multilang-i18n.netlify.app/)
 
